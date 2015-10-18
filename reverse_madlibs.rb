@@ -10,9 +10,6 @@ adjectives = File.open('adjectives.txt', 'r') do |f|
   f.read
 end.split
 
-p verbs
-exit
-
 dictionary = {
   nouns: nouns,
   verbs: verbs,
@@ -47,4 +44,4 @@ contents.gsub!('ADJECTIVE').each do
   dictionary[:adjectives].sample
 end
 
-p contents
+p contents.chomp
