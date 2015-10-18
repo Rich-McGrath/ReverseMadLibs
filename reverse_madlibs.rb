@@ -1,7 +1,19 @@
+nouns = File.open('nouns.txt', 'r') do |f|
+  f.read
+end.split
+
+verbs = File.open('verbs.txt', 'r') do |f|
+  f.read
+end.split
+
+adjectives = File.open('adjectives.txt', 'r') do |f|
+  f.read
+end.split
+
 dictionary = {
-  nouns: %w(dog car clown hat),
-  verbs: %w(juggle spin),
-  adjectives: %w(giant red)
+  nouns: nouns,
+  verbs: verbs,
+  adjectives: adjectives
 }
 
 def say(msg)
