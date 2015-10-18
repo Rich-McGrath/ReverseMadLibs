@@ -1,7 +1,7 @@
 dictionary = {
-  nouns: ['dog', 'car', 'clown', 'hat'],
-  verbs: ['juggle', 'spin'],
-  adjectives: ['giant', 'red'],
+  nouns: %w(dog car clown hat),
+  verbs: %w(juggle spin),
+  adjectives: %w(giant red)
 }
 
 def say(msg)
@@ -19,8 +19,6 @@ exit_with("Input file dosen't exist!") && exit if !File.exist?(ARGV[0])
 contents = File.open(ARGV[0], 'r') do |f|
   f.read
 end
-
-#contents.gsub!('NOUN', dictionary[:nouns].sample)
 
 contents.gsub!('NOUN').each do
   dictionary[:nouns].sample
