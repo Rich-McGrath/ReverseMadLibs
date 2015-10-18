@@ -20,5 +20,7 @@ contents = File.open(ARGV[0], 'r') do |f|
   f.read
 end
 
-contents.gsub('NOUN', dictionary[:nouns].sample)
+contents.gsub!('NOUN', dictionary[:nouns].sample)
+contents.gsub!('VERB', dictionary[:verbs].sample)
+contents.gsub!('ADJECTIVE', dictionary[:adjectives].sample)
 p contents
