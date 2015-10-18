@@ -10,6 +10,9 @@ adjectives = File.open('adjectives.txt', 'r') do |f|
   f.read
 end.split
 
+p verbs
+exit
+
 dictionary = {
   nouns: nouns,
   verbs: verbs,
