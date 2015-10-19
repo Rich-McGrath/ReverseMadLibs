@@ -1,14 +1,20 @@
-nouns = File.open('nouns.txt', 'r') do |f|
-  f.read
-end.split
+def get_words_from_file(file_name)
+  if !File.exist?(file_name)
+    say "#{file_name} dosen't exist!"
+    return
+  end
 
-verbs = File.open('verbs.txt', 'r') do |f|
-  f.read
-end.split
+  File.open(file_name, 'r') do |f|
+    f.read
+  end.split
+end
 
-adjectives = File.open('adjectives.txt', 'r') do |f|
-  f.read
-end.split
+nouns = get_words_from_file('nouns.txt')
+
+verbs = get_words_from_file('verbs.txt')
+
+adjectives = get_words_from_file('adjectives.txt')
+
 
 dictionary = {
   nouns: nouns,
