@@ -38,8 +38,8 @@ contents = File.open(ARGV[0], 'r') do |f|
 end
 
 contents.gsub!('NOUN').each do |noun|
-  # dictionary[:nouns].sample
-  get_inputs(noun)
+  dictionary[:nouns].sample
+  # get_inputs(noun)
 end
 
 contents.gsub!('VERB').each do
