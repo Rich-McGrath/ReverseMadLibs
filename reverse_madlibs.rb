@@ -10,18 +10,9 @@ def get_words_from_file(file_name)
 end
 
 nouns = get_words_from_file('nouns.txt')
-
 verbs = get_words_from_file('verbs.txt')
-
 adjectives = get_words_from_file('adjectives.txt')
-
-
-dictionary = {
-  nouns: nouns,
-  verbs: verbs,
-  adjectives: adjectives
-}
-
+dictionary = { nouns: nouns, verbs: verbs, adjectives: adjectives }
 def say(msg)
   puts "=> #{msg}"
 end
